@@ -94,6 +94,9 @@ for target, source in aliases.items():
     for ext in ('svg', 'png'):
         shutil.copyfile(KIT / f'{source}.{ext}', OUT / f'{target}.{ext}')
 
+# Exportación de correo: fondo blanco dentro del PNG para conservar contraste en modo oscuro.
+subprocess.run(['magick', '-background', 'white', str(KIT / 'pary-studio-color.svg'), '-resize', '720x', '-alpha', 'remove', '-alpha', 'off', str(OUT / 'logo-correo.png')], check=True)
+
 # Favicon con superficie propia: conserva contraste en pestañas claras y oscuras.
 favicon = svg(64, 64, '<rect x="1" y="1" width="62" height="62" rx="14" fill="#b8e6c9" stroke="#648b79" stroke-width="2"/>' + f'<g transform="translate(13 7) scale(.7)">{symbol("#142f2a", "#142f2a")}</g>', 'Pary Studio')
 (OUT / 'favicon.svg').write_text(favicon)
