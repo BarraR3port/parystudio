@@ -1,0 +1,8 @@
+*
+!public
+!public/**
+!scripts
+!scripts/build.ts
+!deploy
+!deploy/Dockerfile.public
+!deploy/nginx.conf
