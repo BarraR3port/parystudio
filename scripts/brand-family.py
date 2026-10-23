@@ -43,6 +43,10 @@ Y = '<path d="M150 22H163L177 55L190 22H203L174 90H161L170 69Z"/>'
 ARY = A + R + Y
 # Studio comparte línea base y utiliza caja mixta para pertenecer al mismo nombre.
 STUDIO, FULL_END = letters('Studio', 218, 72, 90, 750, -2)
+# Compensación óptica: el corte y la forma estrecha de la P reducen su presencia.
+P_SCALE = 1.15
+P_EXTRA_X = 54 * (P_SCALE - 1)
+P_EXTRA_Y = 72 * (P_SCALE - 1)
 
 
 def symbol(ink, accent):
@@ -50,19 +54,19 @@ def symbol(ink, accent):
 
 
 def wordmark(ink, accent, full=True):
-    return symbol(ink, accent) + f'<g fill="{ink}">{ARY}{STUDIO if full else ""}</g>'
+    return f'<g transform="scale({P_SCALE})">{symbol(ink, accent)}</g><g transform="translate({P_EXTRA_X} {P_EXTRA_Y})" fill="{ink}">{ARY}{STUDIO if full else ""}</g>'
 
 
 def composition(kind, ink, accent):
     if kind == 'isotipo':
         return 88, 88, f'<g transform="translate(17 8)">{symbol(ink, accent)}</g>'
     if kind in ('pary', 'firma-pary'):
-        return 219, 106, f'<g transform="translate(8 8)">{wordmark(ink, accent, False)}</g>'
+        return 219 + P_EXTRA_X, 106 + P_EXTRA_Y, f'<g transform="translate(8 8)">{wordmark(ink, accent, False)}</g>'
     if kind in ('pary-studio', 'firma-pary-studio'):
-        return FULL_END + 16, 106, f'<g transform="translate(8 8)">{wordmark(ink, accent)}</g>'
+        return FULL_END + 16 + P_EXTRA_X, 106 + P_EXTRA_Y, f'<g transform="translate(8 8)">{wordmark(ink, accent)}</g>'
     if kind == 'firma-vertical':
-        desc, _ = letters('Studio', 0, 162, 90, 750, -2)
-        return FULL_END - 202, 180, f'<g transform="translate(8 8)">{wordmark(ink, accent, False)}<g fill="{ink}">{desc}</g></g>'
+        desc, _ = letters('Studio', 0, 162 + P_EXTRA_Y, 90, 750, -2)
+        return FULL_END - 202, 180 + P_EXTRA_Y, f'<g transform="translate(8 8)">{wordmark(ink, accent, False)}<g fill="{ink}">{desc}</g></g>'
     raise ValueError(kind)
 
 
@@ -191,7 +195,7 @@ Cada composición incluye color, inversa, negra y blanca. SVG vectoriales trazad
 
 ## Construcción y uso
 
-P de 54 × 72 unidades, altura de x de 50 y línea base en 72. El corte de la P y el remate de la y aportan la diagonal característica; la a y la P comparten curvas de grosor próximo. La distancia entre letras se decide ópticamente y no se modifica al colocar el logo.
+P base de 54 × 72 unidades, ampliada un 15 % en el logotipo para compensar su corte diagonal. Conserva la geometría del isotipo y alinea su base con el nombre; el resto de las letras mantiene una altura de x de 50. El corte de la P y el remate de la y aportan la diagonal característica; la a y la P comparten curvas de grosor próximo. La distancia entre letras se decide ópticamente y no se modifica al colocar el logo.
 
 Área libre mínima: 13 unidades, equivalentes al asta de la P, alrededor de la silueta visible. El margen del archivo no reemplaza esta reserva en cada aplicación. Tamaños de partida: logotipo completo 160 px de ancho, Pary 80 px, isotipo 16 px. Revisar el soporte final; usar el símbolo para favicon. No estirar, añadir otra P, recolorear letras por separado ni aplicar sombras o contornos.
 
@@ -204,4 +208,4 @@ La revisión de legibilidad y aplicaciones no constituye una búsqueda de regist
 with zipfile.ZipFile(ROOT / 'pary-identidad.zip', 'w', zipfile.ZIP_DEFLATED) as z:
     for p in sorted(KIT.iterdir()):
         z.write(p, 'pary-identidad/' + p.name)
-print(f'Identidad integrada: ancho del logotipo {FULL_END + 16:.2f}; SVG, PNG, aplicaciones y ZIP generados.')
+print(f'Identidad integrada: ancho del logotipo {FULL_END + 16 + P_EXTRA_X:.2f}; SVG, PNG, aplicaciones y ZIP generados.')

@@ -14,7 +14,7 @@ Cada composición incluye color, inversa, negra y blanca. SVG vectoriales trazad
 
 ## Construcción y uso
 
-P de 54 × 72 unidades, altura de x de 50 y línea base en 72. El corte de la P y el remate de la y aportan la diagonal característica; la a y la P comparten curvas de grosor próximo. La distancia entre letras se decide ópticamente y no se modifica al colocar el logo.
+P base de 54 × 72 unidades, ampliada un 15 % en el logotipo para compensar su corte diagonal. Conserva la geometría del isotipo y alinea su base con el nombre; el resto de las letras mantiene una altura de x de 50. El corte de la P y el remate de la y aportan la diagonal característica; la a y la P comparten curvas de grosor próximo. La distancia entre letras se decide ópticamente y no se modifica al colocar el logo.
 
 Área libre mínima: 13 unidades, equivalentes al asta de la P, alrededor de la silueta visible. El margen del archivo no reemplaza esta reserva en cada aplicación. Tamaños de partida: logotipo completo 160 px de ancho, Pary 80 px, isotipo 16 px. Revisar el soporte final; usar el símbolo para favicon. No estirar, añadir otra P, recolorear letras por separado ni aplicar sombras o contornos.
 
