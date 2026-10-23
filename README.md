@@ -22,7 +22,7 @@ Vista local: http://127.0.0.1:4324. HTML y CSS, fuentes y recursos alojados loca
 
 ## Identidad
 
-`brand-kit/` contiene el isotipo, logotipos Pary y Pary Studio y sus firmas, en SVG trazado y PNG transparente. Incluye versiones a color, inversas y monocromáticas; proporciones y usos en `brand-kit/LEEME.md`.
+`brand-kit/` contiene el logotipo integrado Pary Studio, su versión corta Pary, el isotipo extraído de la primera letra y la composición vertical, en SVG trazado y PNG transparente. La P aparece una sola vez en cada logotipo. Incluye versiones a color, inversas y monocromáticas; proporciones y usos en `brand-kit/LEEME.md`.
 
 Para regenerar la familia: Python con fontTools y soporte WOFF2, más ImageMagick; ejecutar `python scripts/brand-family.py`.
 

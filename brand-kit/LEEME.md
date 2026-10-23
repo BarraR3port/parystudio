@@ -1,18 +1,25 @@
-# Pary · Sistema de identidad
+# Pary Studio · Identidad integrada
 
-La P Conexión conserva sus dos trazos y el corte diagonal. El nombre usa minúsculas como decisión visual; en texto se escribe Pary o Pary Studio.
+La P Conexión es la primera letra del nombre. Pary se dibuja como una sola palabra: la P distintiva seguida de las letras a, r, y construidas para ella. Studio comparte línea base y usa caja mixta.
 
-- isotipo: P para avatar, favicon y espacios reducidos.
-- pary: logotipo sin símbolo ni descriptor.
-- pary-studio: logotipo con descriptor alineado al centro óptico.
-- firma-pary: símbolo y nombre.
-- firma-pary-studio: firma principal, para web y documentos.
-- firma-vertical: alternativa para espacios cuadrados.
+## Composiciones
 
-Cada composición incluye color, inversa, negra y blanca. Los SVG están trazados y no requieren fuentes instaladas. Los PNG tienen fondo transparente. La lámina sistema-de-marca es una presentación sobre marfil.
+- `pary-studio`: logotipo principal completo, con una sola P.
+- `pary`: versión corta del mismo lettering.
+- `isotipo`: la misma P extraída del nombre; avatar y favicon.
+- `firma-vertical`: Pary sobre Studio, sin añadir un símbolo encima.
+- `firma-pary` y `firma-pary-studio`: alias de compatibilidad de las versiones anteriores; contienen los logotipos integrados.
 
-Proporciones: símbolo de 54 × 72 unidades, distancia de 28 unidades hasta el nombre; descriptor a 20 unidades del nombre. Mantener un área libre exterior de al menos 13 unidades (ancho del asta del símbolo). No deformar, recolorear por partes, añadir sombras ni cambiar la separación.
+Cada composición incluye color, inversa, negra y blanca. SVG vectoriales trazados y PNG transparentes. La lámina y las pruebas de uso son presentaciones; no usarlas como originales del logo.
 
-Tamaños mínimos recomendados: isotipo 24 px de alto; firma Pary 140 px de ancho; firma Pary Studio 240 px de ancho. Debajo de ese tamaño, preferir la firma Pary o el isotipo para conservar legibilidad. En impresión, verificar una prueba al tamaño final.
+## Construcción y uso
 
-Tipografía: Plus Jakarta Sans (licencia SIL OFL en la carpeta de fuentes del proyecto). Paleta: #146451, #142F2A, #F6F5EF y #B8E6C9.
+P de 54 × 72 unidades, altura de x de 50 y línea base en 72. El corte de la P y el remate de la y aportan la diagonal característica; la a y la P comparten curvas de grosor próximo. La distancia entre letras se decide ópticamente y no se modifica al colocar el logo.
+
+Área libre mínima: 13 unidades, equivalentes al asta de la P, alrededor de la silueta visible. El margen del archivo no reemplaza esta reserva en cada aplicación. Tamaños de partida: logotipo completo 160 px de ancho, Pary 80 px, isotipo 16 px. Revisar el soporte final; usar el símbolo para favicon. No estirar, añadir otra P, recolorear letras por separado ni aplicar sombras o contornos.
+
+El lettering de Pary es vectorial propio. Studio y los textos de presentación se basan en Plus Jakarta Sans (SIL OFL en la carpeta de fuentes). No requieren fuentes instaladas para reproducir los SVG. La tipografía de lectura del sitio conserva Plus Jakarta Sans.
+
+Paleta: petróleo #146451, profundo #142F2A, marfil #F6F5EF y menta #B8E6C9. La silueta se mantiene en las versiones de una tinta.
+
+La revisión de legibilidad y aplicaciones no constituye una búsqueda de registro o disponibilidad marcaria.
