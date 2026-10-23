@@ -31,3 +31,9 @@ Para regenerar la familia: Python con fontTools y soporte WOFF2, más ImageMagic
 El caso Monophone presenta alcance de desarrollo y una captura pública. No publica código privado, información de clientes ni métricas comerciales internas. Los logotipos de terceros identifican herramientas utilizadas y no implican una relación comercial con sus titulares; fuentes en `docs/LOGOTIPOS-TERCEROS.md`. La tipografía incluye su licencia SIL OFL.
 
 La sección de IA describe apoyo complementario con validación humana. Las revisiones periódicas se acuerdan dentro del plan de continuidad.
+
+## Apariencia y accesibilidad
+
+Las tres páginas incluyen selector claro/oscuro. La primera visita sigue la preferencia del sistema; una elección manual se guarda solo en el navegador y se aplica antes del CSS. Las animaciones breves de botones respetan `prefers-reduced-motion`. El favicon tiene un fondo menta propio para mantener su contraste en pestañas claras y oscuras.
+
+Verificación visual en Dia: escritorio y móvil de 320 y 390 px; navegación por teclado, cambio de tema y persistencia al recargar.

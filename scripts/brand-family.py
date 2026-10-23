@@ -94,6 +94,13 @@ for target, source in aliases.items():
     for ext in ('svg', 'png'):
         shutil.copyfile(KIT / f'{source}.{ext}', OUT / f'{target}.{ext}')
 
+# Favicon con superficie propia: conserva contraste en pestañas claras y oscuras.
+favicon = svg(64, 64, '<rect x="1" y="1" width="62" height="62" rx="14" fill="#b8e6c9" stroke="#648b79" stroke-width="2"/>' + f'<g transform="translate(13 7) scale(.7)">{symbol("#142f2a", "#142f2a")}</g>', 'Pary Studio')
+(OUT / 'favicon.svg').write_text(favicon)
+raster(OUT / 'favicon.svg', OUT / 'favicon.png', '64x64')
+raster(OUT / 'favicon.svg', OUT / 'apple-touch-icon.png', '180x180')
+subprocess.run(['magick', str(OUT / 'favicon.png'), '-define', 'icon:auto-resize=32,16', str(ROOT / 'public/favicon.ico')], check=True)
+
 # Lámina de presentación. La composición principal se muestra con una sola P.
 parts = ['<rect width="1600" height="1540" fill="#f6f5ef"/>']
 

@@ -22,9 +22,12 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://parystudio.com/">
     <meta property="og:locale" content="es_CL">
-    <link rel="icon" href="/assets/brand/symbol.svg?v=10" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/site.css">
-    <script src="/assets/site.js" defer></script>
+    <link rel="icon" href="/favicon.ico?v=11" sizes="32x32">
+    <link rel="icon" href="/assets/brand/favicon.svg?v=11" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png?v=11">
+    <script src="/assets/theme.js?v=11"></script>
+    <link rel="stylesheet" href="/assets/site.css?v=11">
+    <script src="/assets/site.js?v=11" defer></script>
   </head>
   <body>
     <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -38,8 +41,15 @@
     <header class="header wrap">
       <a class="wordmark" href="/" aria-label="Pary Studio, inicio"
         ><img
-          class="logo-full"
+          class="logo-full logo-on-light"
           src="/assets/brand/logo.svg?v=10"
+          width="218"
+          height="49"
+          alt="Pary Studio"
+        >
+        <img
+          class="logo-full logo-on-dark"
+          src="/assets/brand/logo-white.svg?v=10"
           width="218"
           height="49"
           alt="Pary Studio"
@@ -50,9 +60,48 @@
           >Proceso</a
         ><a href="#seguridad">Seguridad</a><a href="#estudio">El estudio</a>
       </nav>
-      <a class="header-contact" href="#contacto"
-        >Hablemos <span aria-hidden="true">↗</span></a
-      >
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Activar modo oscuro"
+          title="Activar modo oscuro"
+          hidden
+        >
+          <svg
+            class="theme-moon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"/>
+          </svg>
+          <svg
+            class="theme-sun"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+          </svg>
+          <span class="theme-label">Oscuro</span>
+        </button>
+        <a class="header-contact" href="#contacto"
+          >Hablemos <span aria-hidden="true">↗</span></a
+        >
+      </div>
     </header>
     <main id="contenido">
       <div class="hero-shell wrap">
@@ -952,8 +1001,15 @@
     <footer class="wrap footer">
       <a href="/" class="wordmark" aria-label="Pary Studio, inicio"
         ><img
-          class="logo-full"
+          class="logo-full logo-on-light"
           src="/assets/brand/logo.svg?v=10"
+          width="218"
+          height="49"
+          alt="Pary Studio"
+        >
+        <img
+          class="logo-full logo-on-dark"
+          src="/assets/brand/logo-white.svg?v=10"
           width="218"
           height="49"
           alt="Pary Studio"
